@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="BiljartBord.exe" version="1.0.0.1" publicKeyToken="a9b977e36e85ff01" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="BiljartBord" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="BiljartBord.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BiljartBord.exe" size="274880">
+      <assemblyIdentity name="BiljartBord" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>YXp9sM5J66BtZZSJZqq4saP9xqBWFh/etz174Zk8uCo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="BiljartBord.exe.config" size="544">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dBuLcGJZURn7vOGj6aC8JWz8FXkDBNEz5xXQkJL4Dio=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="font\fontawesome-webfont.ttf" size="165548">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qljzPyOaD7AvXHpsRcBD16msmgkzNYBmlOzW1O3A1qg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="fonts\digital-7.ttf" size="34404">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WKaYOFGj48Qzu61Nmsl7AewgTugfsppRIiqShqRVmMI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=GUUS-GELUK\pdeg" issuerKeyHash="0a5fca6d8a92c87cec32e061e7c160f6ae364aae" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>dL9gA1SSfs+TCQNv/KElrUF6VMqvP8tLdIFkK7c2wCA=</DigestValue></Reference></SignedInfo><SignatureValue>ZHEZPnzw08RkTfIl2V2Wxew+gSRThagTFi4NJ/AlxMAqBH4j35zmPZFhgwTmJvJLLez2thR3lxdes/waIabV1grcDvWg+Y9LaCVsnToB2V5SuW94W0K25UXV2cq84WiV2KYbiv5uskEgAlx/pdvcH9BMi+u7yqfrnM+UJ3e6NKU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>teNSFBVuEQelY22RpLpU4lNF1rIR/vCtsJ/jZsTCnOJM6Z+cAIuxfkfqcDm55hNs7Y4Q8UgvWDYjHsT+S4IVutf0+WiPD0hW1mYaaiWjyKPpWje4xamtmBFOcaazrvCdYLUvi/LpE5OoJmGuwbLjXvLZVmNbvIpWxwmWVezlznk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="20c036b72b6481744bcb3fafca547a41ad25a1fc6f030993cf7e92540360bf74" Description="" Url=""><as:assemblyIdentity name="BiljartBord.exe" version="1.0.0.1" publicKeyToken="a9b977e36e85ff01" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=GUUS-GELUK\pdeg</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>akVhgz1hez9+BU76Qrn+i7povueOLQEVEci+2LEerm8=</DigestValue></Reference></SignedInfo><SignatureValue>BsINjNVc/LzIjbHBQX41/IANtxQX/pT8LRCaO+l0SKQzhKe7FCuEWj6rvIjrEMXt04MDLyIjmEy7vYttrTk5xj9mjMWxwM+MdBhnejXkpfpQRYf4fYxRr1cGGHKhF0b1qEuwkaMz6VgxrY5z//rhXjWAv6fPz8LzMbOyhVAgzak=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>teNSFBVuEQelY22RpLpU4lNF1rIR/vCtsJ/jZsTCnOJM6Z+cAIuxfkfqcDm55hNs7Y4Q8UgvWDYjHsT+S4IVutf0+WiPD0hW1mYaaiWjyKPpWje4xamtmBFOcaazrvCdYLUvi/LpE5OoJmGuwbLjXvLZVmNbvIpWxwmWVezlznk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQE7OqotxwFatF1TwxvbJ8cjANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDHh4ARwBVAFUAUwAtAEcARQBMAFUASwBcAHAAZABlAGcwHhcNMjIwNTMxMDU1MjEwWhcNMjMwNTMxMTE1MjEwWjApMScwJQYDVQQDHh4ARwBVAFUAUwAtAEcARQBMAFUASwBcAHAAZABlAGcwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALXjUhQVbhEHpWNtkaS6VOJTRdayEf7wrbCf42bEwpziTOmfnACLsX5H6nA5ueYTbO2OEPFIL1g2Ix7E/kuCFbrX9Plojw9IVtZmGmolo8ij6Vo3uMWprZgRTnGms67wnWC1L4vy6ROTqCZhrsGy417y2VZjW7yKVscJllXs5c55AgMBAAEwDQYJKoZIhvcNAQELBQADgYEAcCGHTrz3RBAoVXYsfCls6xqylPjNvLZdSR6h6xRI1eQo4jAFVK5W3NpsnoIbkNHeqxauP5QwWMIXamqgPVBqA5H2Q+dHLsv1PiJl56yNb/x1GGPEXfLR9ENlczP1Ugqd9IjQ6MqJiSwx8wr7v+pvWOY956WEpgRLk+zJEfUGRVk=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

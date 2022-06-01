@@ -1,0 +1,20 @@
+﻿<Weavers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FodyWeavers.xsd">
+  <Costura>
+  <Unmanaged64Assemblies>
+   B4XSerializator
+   FontAwesome.Sharp
+   ICSharpCode.SharpZipLib
+   MQTTnet
+   Newtonsoft.Json
+   Renci.SshNet
+  </Unmanaged64Assemblies>
+  <Unmanaged32Assemblies>
+   B4XSerializator
+   FontAwesome.Sharp
+   ICSharpCode.SharpZipLib
+   MQTTnet
+   Newtonsoft.Json
+   Renci.SshNet
+  </Unmanaged32Assemblies>
+ </Costura>
+</Weavers>
