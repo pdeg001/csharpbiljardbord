@@ -1,0 +1,26 @@
+{
+  "score": {
+    "p1": {
+      "caram": "023",
+      "naam": "SPELER\n1",
+      "maken": "030"
+    },
+    "p2": {
+      "caram": "012",
+      "naam": "SPELER\n2",
+      "maken": "020"
+    },
+    "aan_stoot": {
+      "speler": "2"
+    },
+    "spelduur": {
+      "tijd": "28:31"
+    },
+    "autoinnings": {
+      "value": "1"
+    },
+    "beurten": {
+      "aantal": "004"
+    }
+  }
+}
