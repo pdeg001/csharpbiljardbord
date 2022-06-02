@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScoreBord));
             this.LblPlayer1Name = new System.Windows.Forms.Label();
             this.LblPlayer2Name = new System.Windows.Forms.Label();
             this.pnlPlayer1Carom = new System.Windows.Forms.Panel();
@@ -88,7 +87,7 @@
             this.LblPlayer1Name.ForeColor = System.Drawing.Color.White;
             this.LblPlayer1Name.Location = new System.Drawing.Point(15, 0);
             this.LblPlayer1Name.Name = "LblPlayer1Name";
-            this.LblPlayer1Name.Size = new System.Drawing.Size(672, 152);
+            this.LblPlayer1Name.Size = new System.Drawing.Size(690, 152);
             this.LblPlayer1Name.TabIndex = 0;
             this.LblPlayer1Name.Text = "SJAAK\r\nVAN DUIJVENVOORDE";
             this.LblPlayer1Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,9 +100,9 @@
             // 
             this.LblPlayer2Name.Font = new System.Drawing.Font("Segoe UI", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.LblPlayer2Name.ForeColor = System.Drawing.Color.White;
-            this.LblPlayer2Name.Location = new System.Drawing.Point(1245, -1);
+            this.LblPlayer2Name.Location = new System.Drawing.Point(1228, -1);
             this.LblPlayer2Name.Name = "LblPlayer2Name";
-            this.LblPlayer2Name.Size = new System.Drawing.Size(675, 145);
+            this.LblPlayer2Name.Size = new System.Drawing.Size(692, 145);
             this.LblPlayer2Name.TabIndex = 1;
             this.LblPlayer2Name.Text = "SJAAK";
             this.LblPlayer2Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,8 +139,8 @@
             this.LblplayerOne1Make.Text = "0";
             this.LblplayerOne1Make.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LblplayerOne1Make.UseCompatibleTextRendering = true;
-            this.LblplayerOne1Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerOne1Make.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerOne1Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber);
+            this.LblplayerOne1Make.MouseEnter += new System.EventHandler(this.LblNumberHoverP1);
             this.LblplayerOne1Make.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // LblplayerOne10Make
@@ -159,8 +158,8 @@
             this.LblplayerOne10Make.Text = "3";
             this.LblplayerOne10Make.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LblplayerOne10Make.UseCompatibleTextRendering = true;
-            this.LblplayerOne10Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerOne10Make.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerOne10Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber);
+            this.LblplayerOne10Make.MouseEnter += new System.EventHandler(this.LblNumberHoverP1);
             this.LblplayerOne10Make.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // LblplayerOne100Make
@@ -178,8 +177,8 @@
             this.LblplayerOne100Make.Text = "0";
             this.LblplayerOne100Make.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LblplayerOne100Make.UseCompatibleTextRendering = true;
-            this.LblplayerOne100Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerOne100Make.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerOne100Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber);
+            this.LblplayerOne100Make.MouseEnter += new System.EventHandler(this.LblNumberHoverP1);
             this.LblplayerOne100Make.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // LblP1MakeHeader
@@ -222,8 +221,8 @@
             this.LblplayerOne1Carom.Text = "3";
             this.LblplayerOne1Carom.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LblplayerOne1Carom.UseCompatibleTextRendering = true;
-            this.LblplayerOne1Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerOne1Carom.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerOne1Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber);
+            this.LblplayerOne1Carom.MouseEnter += new System.EventHandler(this.LblNumberHoverP1);
             this.LblplayerOne1Carom.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // LblplayerOne10Carom
@@ -241,8 +240,8 @@
             this.LblplayerOne10Carom.Text = "1";
             this.LblplayerOne10Carom.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LblplayerOne10Carom.UseCompatibleTextRendering = true;
-            this.LblplayerOne10Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerOne10Carom.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerOne10Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber);
+            this.LblplayerOne10Carom.MouseEnter += new System.EventHandler(this.LblNumberHoverP1);
             this.LblplayerOne10Carom.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // LblplayerOne100Carom
@@ -261,8 +260,8 @@
             this.LblplayerOne100Carom.Text = "0";
             this.LblplayerOne100Carom.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LblplayerOne100Carom.UseCompatibleTextRendering = true;
-            this.LblplayerOne100Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerOne100Carom.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerOne100Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber);
+            this.LblplayerOne100Carom.MouseEnter += new System.EventHandler(this.LblNumberHoverP1);
             this.LblplayerOne100Carom.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // LblP1CaromHeader
@@ -304,8 +303,8 @@
             this.LblplayerTwo1Make.Text = "0";
             this.LblplayerTwo1Make.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LblplayerTwo1Make.UseCompatibleTextRendering = true;
-            this.LblplayerTwo1Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerTwo1Make.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerTwo1Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumberP2);
+            this.LblplayerTwo1Make.MouseEnter += new System.EventHandler(this.LblNumberHoverP2);
             this.LblplayerTwo1Make.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // LblplayerTwo10Make
@@ -323,8 +322,8 @@
             this.LblplayerTwo10Make.Text = "1";
             this.LblplayerTwo10Make.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LblplayerTwo10Make.UseCompatibleTextRendering = true;
-            this.LblplayerTwo10Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerTwo10Make.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerTwo10Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumberP2);
+            this.LblplayerTwo10Make.MouseEnter += new System.EventHandler(this.LblNumberHoverP2);
             this.LblplayerTwo10Make.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // LblplayerTwo100Make
@@ -342,8 +341,8 @@
             this.LblplayerTwo100Make.Text = "0";
             this.LblplayerTwo100Make.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LblplayerTwo100Make.UseCompatibleTextRendering = true;
-            this.LblplayerTwo100Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerTwo100Make.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerTwo100Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumberP2);
+            this.LblplayerTwo100Make.MouseEnter += new System.EventHandler(this.LblNumberHoverP2);
             this.LblplayerTwo100Make.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // LblP2MakeHeader
@@ -385,8 +384,8 @@
             this.LblplayerTwo1Carom.Text = "0";
             this.LblplayerTwo1Carom.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LblplayerTwo1Carom.UseCompatibleTextRendering = true;
-            this.LblplayerTwo1Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerTwo1Carom.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerTwo1Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumberP2);
+            this.LblplayerTwo1Carom.MouseEnter += new System.EventHandler(this.LblNumberHoverP2);
             this.LblplayerTwo1Carom.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // LblplayerTwo10Carom
@@ -405,8 +404,8 @@
             this.LblplayerTwo10Carom.Text = "0";
             this.LblplayerTwo10Carom.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LblplayerTwo10Carom.UseCompatibleTextRendering = true;
-            this.LblplayerTwo10Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerTwo10Carom.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerTwo10Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumberP2);
+            this.LblplayerTwo10Carom.MouseEnter += new System.EventHandler(this.LblNumberHoverP2);
             this.LblplayerTwo10Carom.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // LblplayerTwo100Carom
@@ -424,8 +423,8 @@
             this.LblplayerTwo100Carom.Text = "0";
             this.LblplayerTwo100Carom.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LblplayerTwo100Carom.UseCompatibleTextRendering = true;
-            this.LblplayerTwo100Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
-            this.LblplayerTwo100Carom.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblplayerTwo100Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumberP2);
+            this.LblplayerTwo100Carom.MouseEnter += new System.EventHandler(this.LblNumberHoverP2);
             this.LblplayerTwo100Carom.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // Lblp2CaromHeader
@@ -466,7 +465,7 @@
             this.LblInning.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LblInning.UseCompatibleTextRendering = true;
             this.LblInning.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblInning_MouseDown);
-            this.LblInning.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblInning.MouseEnter += new System.EventHandler(this.LblInningHover);
             this.LblInning.MouseLeave += new System.EventHandler(this.LblNumberLeave);
             // 
             // label7
@@ -649,8 +648,7 @@
             // 
             // PicReclame
             // 
-            this.PicReclame.Image = ((System.Drawing.Image)(resources.GetObject("PicReclame.Image")));
-            this.PicReclame.Location = new System.Drawing.Point(703, 2);
+            this.PicReclame.Location = new System.Drawing.Point(703, -1);
             this.PicReclame.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PicReclame.Name = "PicReclame";
             this.PicReclame.Size = new System.Drawing.Size(526, 316);

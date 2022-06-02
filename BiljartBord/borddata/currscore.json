@@ -1,24 +1,24 @@
 {
   "p1": {
-    "caram": "027",
+    "caram": "039",
     "naam": "SPELER\n1",
-    "maken": "030"
+    "maken": "031"
   },
   "p2": {
-    "caram": "018",
+    "caram": "120",
     "naam": "SPELER\n2",
-    "maken": "020"
+    "maken": "045"
   },
   "aan_stoot": {
     "speler": "2"
   },
   "spelduur": {
-    "tijd": "28:33"
+    "tijd": "28:50"
   },
   "autoinnings": {
     "value": "1"
   },
   "beurten": {
-    "aantal": "009"
+    "aantal": "023"
   }
 }

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
 using System.Net;
@@ -13,11 +14,10 @@ namespace BiljartBord
 
         private PrivateFontCollection pfc = new PrivateFontCollection();
         public string bordDataFolder { get; set; }
+        public string bordImageFolder { get; set; }
         public OperatingSystem OSVersion { get; }
         string currScoreFile = "currscore.json", currScoreDummyFile = "dummycurrscore.json";
         ProcessJson pJson = new ProcessJson();
-
-        
 
         public string GetLocalIp()
         {
@@ -74,7 +74,7 @@ namespace BiljartBord
 
             if (rightMouseClick)
             {
-                addValue = addValue * -1;
+                addValue *= -1;
             }
             iValue += addValue;
             string newInning = iValue.ToString().PadLeft(3, '0');
@@ -98,6 +98,36 @@ namespace BiljartBord
 
             return null;
         }
+
+        public bool GetOs()
+        {
+            OperatingSystem os = Environment.OSVersion;
+            if (os.Platform.ToString().IndexOf("Unix") > -1)
+            {
+                bordDataFolder = @"monoBord/borddata/";
+                bordImageFolder = @"monoBord/borddata/bordimage/";
+                return true;
+            }
+            else
+            {
+                bordDataFolder = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\borddata\";
+                bordImageFolder = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\borddata\bordimage\";
+                return false;
+            }
+
+        }
+
+        public Image ShowReclameImg()
+        {
+            Console.WriteLine(File.Exists($"{bordImageFolder}reclame.png"));
+            if (File.Exists($"{bordImageFolder}reclame.png"))
+            {
+                return Image.FromFile($"{bordImageFolder}reclame.png");
+
+            }
+            return Image.FromFile($"{bordImageFolder}biljarter.jpg");
+        }
+
 
     }
 }

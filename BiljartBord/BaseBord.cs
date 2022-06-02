@@ -5,6 +5,7 @@ namespace BiljartBord
 {
     public partial class MainForm : Form
     {
+        GeneralFunctions GenFunc = new GeneralFunctions();
         public MainForm()
         {
             InitializeComponent();
@@ -12,6 +13,11 @@ namespace BiljartBord
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if (GenFunc.GetOs())
+            {
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.WindowState = FormWindowState.Maximized;
+            }
             LoadBiljartPanel();
         }
 

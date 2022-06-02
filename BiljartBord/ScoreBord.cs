@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Drawing;
 using System.Drawing.Text;
@@ -7,33 +6,29 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-//using System.Windows.Media;
-//using static System.Net.Mime.MediaTypeNames;
-//using System.Net;
+
 
 
 namespace BiljartBord
 {
     public partial class ScoreBord : UserControl
     {   public bool changeBorder;
+        private PrivateFontCollection pfc = new PrivateFontCollection();
+        public int gameStarted;
+        private bool isUnix;
+        
         BordHelper bordHelper = new BordHelper();
         GeneralFunctions GenFunc = new GeneralFunctions();
-        private PrivateFontCollection pfc = new PrivateFontCollection();
 
         public ScoreBord()
         {
-            OperatingSystem os = Environment.OSVersion;
-            if (os.Platform.ToString().IndexOf("Unix") > -1)
-            {
-                GenFunc.bordDataFolder = @"monoBord/borddata/";
-            } else
-            {
-                GenFunc.bordDataFolder = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\borddata\";
-            }
-
-            Console.WriteLine(GenFunc.bordDataFolder);
-            Console.WriteLine("OS Platoform: " + os.Platform.ToString());
+            isUnix = GenFunc.GetOs();
             InitializeComponent();
+        }
+
+        private void ScoreBord_Load(object sender, EventArgs e)
+        {
+            PicReclame.Image = GenFunc.ShowReclameImg();
             SetNumberLabelFont();
             ProcessCurrScore();
         }
@@ -72,10 +67,28 @@ namespace BiljartBord
             }
         }
 
-        private void LblNumberHover(object sender, EventArgs e)
+        private void LblNumberHoverP1(object sender, EventArgs e)
         {
-            Label lbl = sender as Label;
-            lbl.BackColor = ColorTranslator.FromHtml("#FF00FF");
+            if (bordHelper.PlayerAtTable == 1)
+            {
+                Label lbl = sender as Label;
+                lbl.BackColor = ColorTranslator.FromHtml("#FF00FF");
+            }
+        }
+
+        private void LblNumberHoverP2(object sender, EventArgs e)
+        {
+            if (bordHelper.PlayerAtTable == 2)
+            {
+                Label lbl = sender as Label;
+                lbl.BackColor = ColorTranslator.FromHtml("#FF00FF");
+            }
+        }
+
+        private void LblInningHover(object sender, EventArgs e)
+        {
+                Label lbl = sender as Label;
+                lbl.BackColor = ColorTranslator.FromHtml("#FF00FF");
         }
 
         private void LblNumberLeave(object sender, EventArgs e)
@@ -102,12 +115,9 @@ namespace BiljartBord
             LblplayerTwo1Carom.Font = new Font(pfc.Families[0], fontLarge);
             LblplayerTwo10Carom.Font = new Font(pfc.Families[0], fontLarge);
             LblplayerTwo100Carom.Font = new Font(pfc.Families[0], fontLarge);
-            //LblBeurten1.Font = new Font(pfc.Families[0], fontSmall);
-            //LblBeurten10.Font = new Font(pfc.Families[0], fontSmall);
-            //LblBeurten100.Font = new Font(pfc.Families[0], fontSmall);
-
-            LblFooterInfo.Text = GenFunc.GetLocalIp();
+            
             LblInning.Font = new Font(pfc.Families[0], 180);
+            LblFooterInfo.Text = GenFunc.GetLocalIp();
         }
 
         private void SetBordNumber(string mouseClicked, Label lbl, string lTag)
@@ -129,7 +139,7 @@ namespace BiljartBord
 
             if (mouseClicked == "Right")
             {
-                bValue = bValue * -1;
+                bValue *= -1;
             }
             
             int makeValue = hValue+bValue;
@@ -152,54 +162,20 @@ namespace BiljartBord
         {
             bordHelper.PlayerAtTable = 1;
             SetPlayerNameAtTable();
-            Label lbl = sender as Label;
             changeBorder = false;
-            lbl.Refresh();
-            DisablePlayerClickNumber();
+            LblInning.Text = GenFunc.SetInningsText(LblInning.Text, false);
+            CalculateMoyenne();
+           
         }
 
         private void PlayerName2Click(object sender, EventArgs e)
         {
             bordHelper.PlayerAtTable = 2;
             SetPlayerNameAtTable();
-            Label lbl = sender as Label;
             changeBorder = false;
-            lbl.Refresh();
-            DisablePlayerClickNumber();
         }
-
-        private void DisablePlayerClickNumber()
-        {
-            bool enable = bordHelper.PlayerAtTable == 1;
-            EnablePlayerMouseEnter(LblplayerOne100Carom, enable);
-            EnablePlayerMouseEnter(LblplayerOne10Carom, enable);
-            EnablePlayerMouseEnter(LblplayerOne1Carom, enable);
-            EnablePlayerMouseEnter(LblplayerOne100Make, enable);
-            EnablePlayerMouseEnter(LblplayerOne10Make, enable);
-            EnablePlayerMouseEnter(LblplayerOne1Make, enable);
-
-            EnablePlayerMouseEnter(LblplayerTwo100Carom, !enable);
-            EnablePlayerMouseEnter(LblplayerTwo10Carom, !enable);
-            EnablePlayerMouseEnter(LblplayerTwo1Carom, !enable);
-            EnablePlayerMouseEnter(LblplayerTwo100Make, !enable);
-            EnablePlayerMouseEnter(LblplayerTwo10Make, !enable);
-            EnablePlayerMouseEnter(LblplayerTwo1Make, !enable);
-        }
-
-        private void EnablePlayerMouseEnter(Label lbl, bool enable)
-        {
-            if (enable)
-            {
-                lbl.MouseEnter += LblNumberHover;
-                lbl.MouseDown += LblplayerNumber_MouseClick;
-            }
-            else
-            {
-                lbl.MouseEnter -= LblNumberHover;
-                lbl.MouseDown -= LblplayerNumber_MouseClick;
-            }
-        }
-
+               
+        
         private void SetPlayerNameAtTable()
         {
             if (bordHelper.PlayerAtTable == 1)
@@ -224,15 +200,28 @@ namespace BiljartBord
             InningClicked(e.Button.ToString(), sender as Label);
         }
 
-        private void LblplayerNumber_MouseClick(object sender, MouseEventArgs e)
+        private void LblplayerNumber(object sender, MouseEventArgs e)
         {
-            Label lbl = sender as Label;
-            //if (HandleClick(lbl))
-            //{
+            if (bordHelper.PlayerAtTable == 1)
+            {
+                Label lbl = sender as Label;
                 var lTag = lbl.Tag.ToString();
                 SetBordNumber(e.Button.ToString(), lbl, lTag);
                 CalculateMoyenne();
-            //}
+                SetCurrScore();
+            }
+        }
+
+        private void LblplayerNumberP2(object sender, MouseEventArgs e)
+        {
+            if (bordHelper.PlayerAtTable == 2)
+            {
+                Label lbl = sender as Label;
+                var lTag = lbl.Tag.ToString();
+                SetBordNumber(e.Button.ToString(), lbl, lTag);
+                CalculateMoyenne();
+                SetCurrScore();
+            }
         }
 
         private bool HandleClick(Label lbl)
@@ -303,6 +292,7 @@ namespace BiljartBord
                 GameTimeMin++;
             }
 
+            SetCurrScore();
             lblGameTime.Text = $"{GameTimeHrs.ToString().PadLeft(2, '0')}:{GameTimeMin.ToString().PadLeft(2, '0')}";
 
         }
@@ -312,10 +302,7 @@ namespace BiljartBord
             Application.Exit();
         }
 
-        private void ScoreBord_Load(object sender, EventArgs e)
-        {
-
-        }
+       
               
         /**Get and set last played data*/
         private void ProcessCurrScore()
@@ -350,7 +337,7 @@ namespace BiljartBord
             bordHelper.SetPlayerAtTable(int.Parse(score.AanStoot.Speler));
 
             CalculateMoyenne();
-            DisablePlayerClickNumber();
+           // DisablePlayerClickNumber();
             SetPlayerNameAtTable();
         }
 
@@ -376,7 +363,6 @@ namespace BiljartBord
 
 
             string json = JsonConvert.SerializeObject(score, Formatting.Indented);
-            Console.WriteLine(json);
             File.WriteAllText(filePath, json);
 
         }
@@ -385,5 +371,6 @@ namespace BiljartBord
         {
             SetCurrScore();
         }
+
     }
 }
