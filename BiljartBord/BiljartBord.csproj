@@ -247,6 +247,7 @@
       <DependentUpon>BordMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneralFunctions.cs" />
+    <Compile Include="ProcessJson.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -276,6 +277,7 @@
     </EmbeddedResource>
     <None Include="BiljartBord_TemporaryKey.pfx" />
     <EmbeddedResource Include="CScoreboard.ttf" />
+    <None Include="borddata\dummycurrscore.json" />
     <None Include="dig.otf" />
     <EmbeddedResource Include="digital-7.ttf" />
     <None Include="fonts\dig.otf" />

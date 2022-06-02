@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BiljartBord.exe" size="234432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BiljartBord.exe" size="240064">
       <assemblyIdentity name="BiljartBord" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QR/Nd9lar8tlESzf1pm7acIYPAdSPjG5ZEfHoCUhz0s=</dsig:DigestValue>
+        <dsig:DigestValue>GnD5c4KpMxZzlXy4acHZu/P4GDFkbnnicDvsJKVt9t4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

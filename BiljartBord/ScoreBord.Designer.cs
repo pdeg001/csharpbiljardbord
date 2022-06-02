@@ -53,6 +53,7 @@
             this.LblplayerTwo100Carom = new System.Windows.Forms.Label();
             this.Lblp2CaromHeader = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LblInning = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,7 +72,7 @@
             this.PgPlayerTwo = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.PicReclame = new System.Windows.Forms.PictureBox();
-            this.LblInning = new System.Windows.Forms.Label();
+            this.BtnTest = new System.Windows.Forms.Button();
             this.pnlPlayer1Carom.SuspendLayout();
             this.pnlPlayerOneCarom.SuspendLayout();
             this.pnlPlayer2Carom.SuspendLayout();
@@ -127,6 +128,7 @@
             // LblplayerOne1Make
             // 
             this.LblplayerOne1Make.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblplayerOne1Make.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblplayerOne1Make.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.LblplayerOne1Make.ForeColor = System.Drawing.Color.Yellow;
             this.LblplayerOne1Make.Location = new System.Drawing.Point(449, 64);
@@ -145,6 +147,7 @@
             // LblplayerOne10Make
             // 
             this.LblplayerOne10Make.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblplayerOne10Make.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblplayerOne10Make.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.LblplayerOne10Make.ForeColor = System.Drawing.Color.Yellow;
             this.LblplayerOne10Make.Location = new System.Drawing.Point(230, 64);
@@ -207,6 +210,7 @@
             // LblplayerOne1Carom
             // 
             this.LblplayerOne1Carom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblplayerOne1Carom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblplayerOne1Carom.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.LblplayerOne1Carom.ForeColor = System.Drawing.Color.Yellow;
             this.LblplayerOne1Carom.Location = new System.Drawing.Point(453, 53);
@@ -225,6 +229,7 @@
             // LblplayerOne10Carom
             // 
             this.LblplayerOne10Carom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblplayerOne10Carom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblplayerOne10Carom.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold);
             this.LblplayerOne10Carom.ForeColor = System.Drawing.Color.Yellow;
             this.LblplayerOne10Carom.Location = new System.Drawing.Point(232, 53);
@@ -255,6 +260,7 @@
             this.LblplayerOne100Carom.Tag = "100";
             this.LblplayerOne100Carom.Text = "0";
             this.LblplayerOne100Carom.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.LblplayerOne100Carom.UseCompatibleTextRendering = true;
             this.LblplayerOne100Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
             this.LblplayerOne100Carom.MouseEnter += new System.EventHandler(this.LblNumberHover);
             this.LblplayerOne100Carom.MouseLeave += new System.EventHandler(this.LblNumberLeave);
@@ -286,6 +292,7 @@
             // LblplayerTwo1Make
             // 
             this.LblplayerTwo1Make.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblplayerTwo1Make.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblplayerTwo1Make.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold);
             this.LblplayerTwo1Make.ForeColor = System.Drawing.Color.Yellow;
             this.LblplayerTwo1Make.Location = new System.Drawing.Point(455, 64);
@@ -304,6 +311,7 @@
             // LblplayerTwo10Make
             // 
             this.LblplayerTwo10Make.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblplayerTwo10Make.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblplayerTwo10Make.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold);
             this.LblplayerTwo10Make.ForeColor = System.Drawing.Color.Yellow;
             this.LblplayerTwo10Make.Location = new System.Drawing.Point(235, 64);
@@ -315,7 +323,6 @@
             this.LblplayerTwo10Make.Text = "1";
             this.LblplayerTwo10Make.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LblplayerTwo10Make.UseCompatibleTextRendering = true;
-            this.LblplayerTwo10Make.Click += new System.EventHandler(this.LblplayerTwo10Make_Click);
             this.LblplayerTwo10Make.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
             this.LblplayerTwo10Make.MouseEnter += new System.EventHandler(this.LblNumberHover);
             this.LblplayerTwo10Make.MouseLeave += new System.EventHandler(this.LblNumberLeave);
@@ -323,6 +330,7 @@
             // LblplayerTwo100Make
             // 
             this.LblplayerTwo100Make.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblplayerTwo100Make.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblplayerTwo100Make.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold);
             this.LblplayerTwo100Make.ForeColor = System.Drawing.Color.Yellow;
             this.LblplayerTwo100Make.Location = new System.Drawing.Point(15, 64);
@@ -365,6 +373,7 @@
             // LblplayerTwo1Carom
             // 
             this.LblplayerTwo1Carom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblplayerTwo1Carom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblplayerTwo1Carom.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold);
             this.LblplayerTwo1Carom.ForeColor = System.Drawing.Color.Yellow;
             this.LblplayerTwo1Carom.Location = new System.Drawing.Point(455, 53);
@@ -384,6 +393,7 @@
             // 
             this.LblplayerTwo10Carom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblplayerTwo10Carom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblplayerTwo10Carom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblplayerTwo10Carom.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.LblplayerTwo10Carom.ForeColor = System.Drawing.Color.Yellow;
             this.LblplayerTwo10Carom.Location = new System.Drawing.Point(235, 53);
@@ -395,7 +405,6 @@
             this.LblplayerTwo10Carom.Text = "0";
             this.LblplayerTwo10Carom.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LblplayerTwo10Carom.UseCompatibleTextRendering = true;
-            this.LblplayerTwo10Carom.Click += new System.EventHandler(this.LblplayerTwo10Carom_Click);
             this.LblplayerTwo10Carom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblplayerNumber_MouseClick);
             this.LblplayerTwo10Carom.MouseEnter += new System.EventHandler(this.LblNumberHover);
             this.LblplayerTwo10Carom.MouseLeave += new System.EventHandler(this.LblNumberLeave);
@@ -403,6 +412,7 @@
             // LblplayerTwo100Carom
             // 
             this.LblplayerTwo100Carom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblplayerTwo100Carom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblplayerTwo100Carom.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.LblplayerTwo100Carom.ForeColor = System.Drawing.Color.Yellow;
             this.LblplayerTwo100Carom.Location = new System.Drawing.Point(15, 53);
@@ -440,6 +450,25 @@
             this.panel1.Size = new System.Drawing.Size(528, 304);
             this.panel1.TabIndex = 5;
             // 
+            // LblInning
+            // 
+            this.LblInning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblInning.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblInning.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold);
+            this.LblInning.ForeColor = System.Drawing.Color.Yellow;
+            this.LblInning.Location = new System.Drawing.Point(16, 60);
+            this.LblInning.Name = "LblInning";
+            this.LblInning.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.LblInning.Size = new System.Drawing.Size(496, 243);
+            this.LblInning.TabIndex = 4;
+            this.LblInning.Tag = "10";
+            this.LblInning.Text = "0 1 3";
+            this.LblInning.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.LblInning.UseCompatibleTextRendering = true;
+            this.LblInning.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblInning_MouseDown);
+            this.LblInning.MouseEnter += new System.EventHandler(this.LblNumberHover);
+            this.LblInning.MouseLeave += new System.EventHandler(this.LblNumberLeave);
+            // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Segoe UI", 30.25F);
@@ -472,7 +501,6 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Percentage";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // LblP1Moyenne
             // 
@@ -630,28 +658,22 @@
             this.PicReclame.TabIndex = 2;
             this.PicReclame.TabStop = false;
             // 
-            // LblInning
+            // BtnTest
             // 
-            this.LblInning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LblInning.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold);
-            this.LblInning.ForeColor = System.Drawing.Color.Yellow;
-            this.LblInning.Location = new System.Drawing.Point(16, 60);
-            this.LblInning.Name = "LblInning";
-            this.LblInning.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
-            this.LblInning.Size = new System.Drawing.Size(496, 243);
-            this.LblInning.TabIndex = 4;
-            this.LblInning.Tag = "10";
-            this.LblInning.Text = "0 1 3";
-            this.LblInning.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.LblInning.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblInning_MouseDown);
-            this.LblInning.MouseEnter += new System.EventHandler(this.LblNumberHover);
-            this.LblInning.MouseLeave += new System.EventHandler(this.LblNumberLeave);
+            this.BtnTest.Location = new System.Drawing.Point(412, 990);
+            this.BtnTest.Name = "BtnTest";
+            this.BtnTest.Size = new System.Drawing.Size(75, 23);
+            this.BtnTest.TabIndex = 22;
+            this.BtnTest.Text = "Test Knopje";
+            this.BtnTest.UseVisualStyleBackColor = true;
+            this.BtnTest.Click += new System.EventHandler(this.BtnTest_Click);
             // 
             // ScoreBord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(1)))));
+            this.Controls.Add(this.BtnTest);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlPlayer2Carom);
             this.Controls.Add(this.pnlPlayerOneCarom);
@@ -734,5 +756,6 @@
         private System.Windows.Forms.ProgressBar PgPlayerTwo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LblInning;
+        private System.Windows.Forms.Button BtnTest;
     }
 }

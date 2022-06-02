@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System;
 using System.Drawing.Text;
 using System.IO;
 using System.Net;
@@ -12,6 +12,12 @@ namespace BiljartBord
     {
 
         private PrivateFontCollection pfc = new PrivateFontCollection();
+        public string bordDataFolder { get; set; }
+        public OperatingSystem OSVersion { get; }
+        string currScoreFile = "currscore.json", currScoreDummyFile = "dummycurrscore.json";
+        ProcessJson pJson = new ProcessJson();
+
+        
 
         public string GetLocalIp()
         {
@@ -22,7 +28,6 @@ namespace BiljartBord
                 return endPoint.Address.ToString();
             }
         }
-
         public FontCollection GetBordFont()
         {
             Stream fontStream = this.GetType().Assembly.GetManifestResourceStream("BiljartBord.TickingTimebombBB.ttf");
@@ -55,10 +60,43 @@ namespace BiljartBord
             return false;
         }
 
-        public string SetInningsText(string inning)
+        public string SetInningsText(string inning, bool rightMouseClick)
         {
-            object[] array = { inning.Substring(0,1), inning.Substring(1, 1), inning.Substring(2, 1) };
-            return string.Join(" ", array); 
+            int addValue = 1;
+            string[] inningText = inning.Split(' ');
+            string strInningValue = $"{inningText[0]}{inningText[1]}{inningText[2]}";
+            int iValue = int.Parse(strInningValue);
+
+            if (iValue == 0 && rightMouseClick)
+            {
+                return inning;
+            }
+
+            if (rightMouseClick)
+            {
+                addValue = addValue * -1;
+            }
+            iValue += addValue;
+            string newInning = iValue.ToString().PadLeft(3, '0');
+
+            object[] array = {newInning.Substring(0,1), newInning.Substring(1, 1), newInning.Substring(2, 1) };
+            return string.Join(" ", array);
+        }
+
+        public string gBordDataFolder()
+        {
+            return bordDataFolder;
+        }
+
+        public ProcessJson.CurrScore.Root GetCurrScore()
+        {
+            if (File.Exists(Path.Combine(bordDataFolder, currScoreFile)))
+            {
+                string strCurrScore = File.ReadAllText(Path.Combine(bordDataFolder, currScoreFile));
+                return JsonConvert.DeserializeObject<ProcessJson.CurrScore.Root>(strCurrScore);
+            }
+
+            return null;
         }
 
     }
