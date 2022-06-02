@@ -361,7 +361,6 @@ namespace BiljartBord
             score.P2.Naam = LblPlayer2Name.Text;
             score.P2.Maken = $"{LblplayerTwo100Make.Text}{LblplayerTwo10Make.Text}{LblplayerTwo1Make.Text}";
 
-
             string json = JsonConvert.SerializeObject(score, Formatting.Indented);
             File.WriteAllText(filePath, json);
 
